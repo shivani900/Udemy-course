@@ -1,3 +1,4 @@
+import art
 # Add
 def add(n1,n2):
   return n1+n2
@@ -22,13 +23,14 @@ operations={
 }
 
 def calculator():
-  num1=int(input("Enter your first number: "))
+  print(art.logo)
+  num1=float(input("Enter your first number: "))
   for i in operations:
     print(i)
   should_continue = True
   while should_continue:
     operation = input("Pick an operation: ")
-    num2=int(input("Enter your second number: "))
+    num2=float(input("Enter your second number: "))
     function=operations[operation]
     answer=function(num1,num2)
     print(f"{num1} {operation} {num2} = {answer}")
